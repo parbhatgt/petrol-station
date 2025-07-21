@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
 import SelectOne from "./pages/SelectOne";
 import QuantityEntryUI from "./pages/QuantityEntryUI";
 import ConfirmationUI from "./pages/ConfirmationUI";
@@ -12,8 +12,8 @@ import AskForVatBill from "./pages/AskForVatBill";
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/selectone" element={<SelectOne />} />
+      <Route path="/" element={<SelectOne />} />
+      {/* <Route path="/selectone" element={<SelectOne />} /> */}
       <Route path="/quantity" element={<QuantityEntryUI />} />
       <Route path="/confirm" element={<ConfirmationUI />} />
       <Route path="/scan-payment" element={<ScanPayment />} />

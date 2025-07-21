@@ -33,7 +33,7 @@ const SelectOne = () => {
       <div className="flex justify-center gap-6 mb-8">
         <button
           onClick={handlePetrolClick}
-          className="bg-red-700 hover:bg-red-900 text-white font-semibold py-4 px-8 rounded-lg shadow-lg transition-colors duration-300 flex items-center gap-3"
+          className="bg-red-700 text-white font-semibold py-4 px-8 rounded-lg shadow-lg transition-colors duration-300 flex items-center gap-3"
         >
           <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
             <span className="text-blue-600 font-bold text-sm">P</span>
@@ -43,7 +43,7 @@ const SelectOne = () => {
 
         <button
           onClick={handleDieselClick}
-          className="bg-[#0E4382] hover:bg-[#0C386E] text-white font-semibold py-4 px-8 rounded-lg shadow-lg transition-colors duration-300 flex items-center gap-3"
+          className="bg-[#0E4382]  text-white font-semibold py-4 px-8 rounded-lg shadow-lg transition-colors duration-300 flex items-center gap-3"
         >
           <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
             <span className="text-green-600 font-bold text-sm">D</span>
@@ -54,7 +54,7 @@ const SelectOne = () => {
     
 
       {/* Back Button */}
-      <BackButton />
+      {/* <BackButton /> */}
     </Layout>
   );
 };

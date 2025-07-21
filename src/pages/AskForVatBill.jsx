@@ -1,3 +1,4 @@
+import BackButton from '../components/BackButton'
 import Layout from '../layout/Layout'
 import { useNavigate } from 'react-router-dom'
 
@@ -6,8 +7,8 @@ const AskForVatBill = () => {
   return (
     <Layout>
 <div className="min-h-screen flex justify-center bg-gray-100 py-10">
-  <div className="bg-gray-100   p-6 max-w-md w-full text-center transform transition-all duration-300">
-    <h2 className="text-xl font-semibold text-gray-800 mb-6">
+  <div className="bg-gray-100   p-6 max-w-xxl  w-full text-center transform transition-all duration-300">
+    <h2 className="text-3xl font-bold text-gray-800 mb-6">
       DO YOU WANT VAT BILL?
     </h2>
 
@@ -15,14 +16,14 @@ const AskForVatBill = () => {
       <button
     
         onClick={() => navigate("/vat-bill")}
-        className="flex-1 bg-gradient-to-r bg-[#0E4382] hover:bg-[#0C386E] text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-green-300"
+        className="flex-1  bg-[#0E4382]  text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform  focus:outline-none focus:ring-4 focus:ring-green-300"
       >
         <span className="text-lg">✓ YES</span>
       </button>
 
       <button
         onClick={() => navigate("/success-payment")}
-        className="flex-1 bg-red-700 hover:bg-red-900 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-gray-300"
+        className="flex-1 bg-red-700 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform  focus:outline-none focus:ring-4 focus:ring-gray-300"
       >
         <span className="text-lg">✗ NO</span>
       </button>
@@ -34,6 +35,7 @@ const AskForVatBill = () => {
   </div>
 </div>
 
+<BackButton/>
 
     </Layout>
   )

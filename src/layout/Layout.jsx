@@ -48,11 +48,10 @@ const Layout = ({ children }) => {
     <div className="min-h-screen w-full flex flex-col bg-gray-100 overflow-hidden">
       {/* Header */}
       <header className="h-[80px] min-h-[80px] flex justify-between items-center px-6 bg-gray-100 ">
-        <h1 className="text-2xl md:text-3xl font-bold tracking-wide">
-          <img src="/img/logo_1.png" />
-        </h1>
+        <img src="/img/logo_1.png" alt="Logo" className="h-full object-contain" />
+
         <div className="text-right">
-          <p className="text-sm md:text-base">{currentDate}</p>
+          <p className="text-lg md:text-base">{currentDate}</p>
           <p className="text-lg md:text-xl font-semibold">{currentTime}</p>
         </div>
       </header>
@@ -63,7 +62,7 @@ const Layout = ({ children }) => {
       </main>
 
       {/* Footer */}
-      <footer className="h-[70px] min-h-[70px] bg-white text-white flex items-center justify-center text-sm md:text-base">
+      <footer className="h-[70px] min-h-[70px]  text-white flex items-center justify-center text-sm md:text-base">
         <Footer />
       </footer>
     </div>

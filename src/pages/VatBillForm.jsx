@@ -58,47 +58,46 @@ const VatBillForm = () => {
   return (
     <Layout>
       <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
-        <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
+        <div className="bg-gray-100  w-full max-w-xxl">
           <div className="text-center mb-8">
-            <h1 className="text-2xl font-bold text-gray-800 mb-2">VAT Bill Request</h1>
-            <p className="text-gray-600 text-sm">Please provide your details</p>
+            <h1 className="text-4xl font-bold text-gray-800 mb-2">VAT Bill Request</h1>
+            <p className="text-gray-600 text-2xl">Please provide your details</p>
           </div>
 
           <form className="space-y-6">
             {/* Name Field */}
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">Full Name *</label>
+              <label className="block text-lg font-bold text-gray-700 mb-2">Full Name *</label>
               <input
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleInputChange}
                 onFocus={() => setFocusedInput('name')}
-                className="w-full px-4 py-3 border-2 rounded-xl border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                className="w-full px-4 py-3 border-2 rounded-lg border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-200"
                 placeholder="Enter your full name"
               />
             </div>
 
             {/* PAN Number Field */}
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">PAN Number *</label>
+              <label className="block text-lg font-bold text-gray-700 mb-2">PAN Number *</label>
               <input
                 type="number"
                 name="panNumber"
                 value={formData.panNumber}
                 onChange={handleInputChange}
                 onFocus={() => setFocusedInput('panNumber')}
-                className="w-full px-4 py-3 border-2 rounded-xl font-mono tracking-wider border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-200"
-                placeholder="23422"
+                className="w-full px-4 py-3 border-2 rounded-lg font-mono tracking-wider border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                placeholder="xxxxx"
               />
-              <p className="mt-1 text-xs text-gray-500">Format: 5 letters + 4 digits + 1 letter</p>
             </div>
 
                 <div className="flex gap-3 pt-2">
               <button
                 type="button"
                 onClick={handleCancel}
-                className="flex-1 px-6 py-3 border bg-red-700 text-gray-700 rounded-xl"
+                className="flex-1  py-4 px-6 border bg-red-700 text-white font-bold rounded-xl"
                 
               >
                 Cancel
@@ -106,7 +105,7 @@ const VatBillForm = () => {
               <button
                 type="submit"
                 onClick={handleSubmit}
-                className="flex-1 px-6 py-3 bg-[#0E4382] hover:bg-[#0C386E] text-white rounded-xl disabled:opacity-50"
+                className="flex-1  py-4 px-6 bg-[#0E4382] hover:bg-[#0C386E] text-white font-bold rounded-xl disabled:opacity-50"
               >
                 Submit
               </button>

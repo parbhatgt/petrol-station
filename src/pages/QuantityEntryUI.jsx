@@ -89,10 +89,10 @@ const QuantityEntryUI = () => {
 
   return (
     <Layout>
-      <div className="flex flex-col items-center justify-center   bg-gray-100 p-4">
-        <div className="bg-gray-100 rounded-2xl shadow-2xl p-8 max-w-md w-full">
+      <div className="flex flex-col items-center justify-center bg-gray-100 p-4">
+        <div className="bg-gray-100 p-8 max-w-xxl w-full">
           {/* Header */}
-          <h2 className="text-2xl font-bold text-gray-800 text-center mb-8 tracking-wider">
+          <h2 className="text-4xl font-bold text-gray-800 text-center mb-8 tracking-wider">
             ENTER QUANTITY
           </h2>
 
@@ -101,7 +101,7 @@ const QuantityEntryUI = () => {
             <div
               className={`text-4xl font-bold cursor-pointer p-4 rounded-lg transition-all duration-300 ${
                 activeInput === "liters"
-                  ? "text-blue-500 bg-blue-50 shadow-lg scale-105"
+                  ? "text-blue-500 bg-blue-100"
                   : "text-gray-400"
               }`}
               onClick={() => setActiveInput("liters")}
@@ -112,9 +112,9 @@ const QuantityEntryUI = () => {
             <div className="text-4xl font-bold text-gray-300 mx-2">|</div>
 
             <div
-              className={`text-4xl font-bold cursor-pointer p-4 rounded-lg transition-all duration-300 ${
+              className={`text-4xl font-bold cursor-pointer p-4 rounded-lg  ${
                 activeInput === "rupees"
-                  ? "text-blue-500 bg-blue-50 shadow-lg scale-105"
+                  ? "text-blue-500 bg-blue-100 "
                   : "text-gray-400"
               }`}
               onClick={() => setActiveInput("rupees")}
@@ -127,10 +127,10 @@ const QuantityEntryUI = () => {
           <div className="flex justify-between mb-8 px-4">
             <button
               onClick={() => setActiveInput("liters")}
-              className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${
+              className={`px-6 py-2 rounded-full font-bold transition-all bg-yellow-400  ${
                 activeInput === "liters"
-                  ? "bg-gray-700 text-white shadow-lg"
-                  : "bg-gray-300 text-gray-700 hover:bg-gray-400"
+                  ? "bg-gray-700"
+                  : ""
               }`}
             >
               in Liters
@@ -138,10 +138,10 @@ const QuantityEntryUI = () => {
 
             <button
               onClick={() => setActiveInput("rupees")}
-              className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${
+              className={` py-3 px-6  rounded-full font-bold transition-all bg-yellow-400  ${
                 activeInput === "rupees"
-                  ? "bg-gray-700 text-white shadow-lg"
-                  : "bg-gray-300 text-gray-700 hover:bg-gray-400"
+                  ? "bg-gray-700"
+                  : ""
               }`}
             >
               in Rs.
@@ -149,12 +149,13 @@ const QuantityEntryUI = () => {
           </div>
 
           {/* Keypad */}
-          <div className="grid grid-cols-3 gap-4 mb-6">
+          <div className="w-full flex justify-center">
+          <div className="grid grid-cols-3 gap-10 mb-6 mx-auto">
             {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
               <button
                 key={num}
                 onClick={() => handleNumberClick(num.toString())}
-                className="w-14 h-14 bg-gray-700 text-white text-xl font-bold rounded-full hover:bg-gray-600 active:bg-gray-800 transition-all duration-150 transform hover:scale-105 active:scale-95 shadow-lg"
+                className="w-14 h-14 bg-gray-700 text-white text-xl font-bold rounded-full  duration-150 transform shadow-lg"
               >
                 {num}
               </button>
@@ -163,21 +164,21 @@ const QuantityEntryUI = () => {
             {/* Bottom row: ., 0, ← */}
             <button
               onClick={handleClear}
-              className="w-14 h-14 bg-gray-700 text-white text-xl font-bold rounded-full hover:bg-gray-600 active:bg-gray-800 transition-all duration-150 transform hover:scale-105 active:scale-95 shadow-lg"
+              className="w-14 h-14 bg-gray-700 text-white text-xl font-bold rounded-full transition-all duration-150 transform  shadow-lg"
             >
               C
             </button>
 
             <button
               onClick={() => handleNumberClick("0")}
-              className="w-14 h-14 bg-gray-700 text-white text-xl font-bold rounded-full hover:bg-gray-600 active:bg-gray-800 transition-all duration-150 transform hover:scale-105 active:scale-95 shadow-lg"
+              className="w-14 h-14 bg-gray-700 text-white text-xl font-bold rounded-full  transition-all duration-150 transform shadow-lg"
             >
               0
             </button>
 
             <button
               onClick={handleBackspace}
-              className="w-14 h-14 bg-gray-700 text-white text-xl font-bold rounded-full hover:bg-gray-600 active:bg-gray-800 transition-all duration-150 transform hover:scale-105 active:scale-95 shadow-lg flex items-center justify-center"
+              className="w-14 h-14 bg-gray-700 text-white text-xl font-bold rounded-full transition-all duration-150 transform  shadow-lg flex items-center justify-center"
             >
               <svg
                 className="w-6 h-6"
@@ -194,9 +195,10 @@ const QuantityEntryUI = () => {
               </svg>
             </button>
           </div>
+          </div>
 
           {/* Rate Display */}
-          <div className="text-center text-sm text-red-600 mb-4">
+          <div className="text-center text-2xl font-bold text-red-600 mb-4">
             Rate: Rs.{pricePerLiter} per liter
           </div>
 
@@ -204,13 +206,13 @@ const QuantityEntryUI = () => {
           <div className="flex gap-4">
             <button
               onClick={handleClear}
-              className="flex-1 bg-red-700 hover:bg-red-900 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300"
+              className="flex-1 bg-red-700  text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300"
             >
               Clear
             </button>
             <button
               onClick={handleQuantityEntry}
-              className="flex-1 bg-[#0E4382] hover:bg-[#0C386E] text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300"
+              className="flex-1 bg-[#0E4382]  text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300"
             >
               Process
             </button>
