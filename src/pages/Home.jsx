@@ -10,7 +10,7 @@ const Home = () => {
   };
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white relative overflow-hidden">
+      <div className="min-h-screen bg-gray-100 relative overflow-hidden">
         {/* Welcome Section */}
         <div className="text-center mb-10">
           <h2 className="text-2xl font-bold text-red-700 ">
@@ -24,23 +24,17 @@ const Home = () => {
 
         {/* Services Section */}
         <div className="text-center mb-8 mt-4">
-          <span className="text-2xl font-bold  text-red-700">OUR SERVICES</span>
+          <span className="text-2xl font-bold  text-red-700">OUR SERVICES | हाम्रा सेवाहरू</span>
           <div className="flex flex-wrap justify-center gap-2 text-[#0E4382] font-medium mt-1">
-            <span>Account Statement</span>
+            <span>PETROL</span>
             <span className="text-gray-400">•</span>
-            <span>Balance Certificate</span>
-            <span className="text-gray-400">•</span>
-            <span>Old To New Account</span>
-            <span className="text-gray-400">•</span>
-            <span>Card Request</span>
-            <span className="text-gray-400">•</span>
-            <span>Balance Inquiry</span>
+            <span>DIESEL</span>
+         
           </div>
 
           <div className="mt-4 text-[#0E4382]">
             <p>
-              हाम्रा सेवाहरू : खाताको विवरण, ब्यालेन्स प्रमाणपत्र, नयाँ खाता न.,
-              कार्ड अनुरोध, ब्यालेन्स सोधपुछ
+              हाम्रा सेवाहरू : पेट्रोल , डिजेल
             </p>
           </div>
         </div>

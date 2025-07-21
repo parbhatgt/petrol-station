@@ -1,23 +1,30 @@
 const Footer = () => {
   return (
-    <footer className="mt-5 w-full bg-gray-500 text-white py-4">
-      <div className="container mx-auto px-6 flex flex-col sm:flex-row justify-between items-center text-sm gap-3">
-        {/* Logo + Name */}
+    <footer className="mt-5 w-full bg-white shadow-xs py-4">
+      <div className="container mx-auto px-6 flex items-center justify-between">
+        {/* Left: Logo + Name */}
         <div className="flex items-center space-x-2">
-          <div className="w-8 h-4 bg-red-600 rounded flex items-center justify-center">
-            <span className="text-white text-xs font-bold">GT</span>
+          <div className="w-12 h-8 rounded flex items-center justify-center">
+            <img
+              src="/img/FB Logo.png"
+              className="w-full h-full object-contain"
+              alt="FB Logo"
+            />
           </div>
-          <span className="text-gray-300">GENTECH</span>
         </div>
 
-        {/* Center Text */}
-        <div className="text-center text-gray-300">
+        {/* Center Text (optional) */}
+        {/* <div className="absolute left-1/2 -translate-x-1/2 text-center text-gray-400 text-sm">
           generaltechnology.com.np | 9802300007 | © 2023. All rights reserved.
-        </div>
+        </div> */}
 
-        {/* Right section (if needed in future) */}
-        <div className="flex items-center space-x-2">
-          {/* Additional links or icons can go here */}
+        {/* Right: Logo Image */}
+        <div className="flex items-center">
+          <img
+            src="/img/elite.png"
+            alt="Elite Logo"
+            className="h-8 object-contain"
+          />
         </div>
       </div>
     </footer>

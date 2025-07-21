@@ -6,6 +6,8 @@ import ConfirmationUI from "./pages/ConfirmationUI";
 import ScanPayment from "./pages/ScanPayment";
 import SuccessfulPayment from "./pages/SuccessfulPayment";
 import PaymentFailureUI from "./pages/PaymentFailureUI";
+import VatBillForm from "./pages/VatBillForm";
+import AskForVatBill from "./pages/AskForVatBill";
 
 const App = () => {
   return (
@@ -15,8 +17,10 @@ const App = () => {
       <Route path="/quantity" element={<QuantityEntryUI />} />
       <Route path="/confirm" element={<ConfirmationUI />} />
       <Route path="/scan-payment" element={<ScanPayment />} />
+      <Route path="/ask-vat" element={<AskForVatBill/>} />
       <Route path="/success-payment" element={<SuccessfulPayment />} />
       <Route path="/unsuccess-payment" element={<PaymentFailureUI />} />
+      <Route path="/vat-bill" element={<VatBillForm/>} />
     </Routes>
   );
 };

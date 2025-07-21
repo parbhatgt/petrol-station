@@ -89,7 +89,7 @@ const QuantityEntryUI = () => {
 
   return (
     <Layout>
-      <div className="flex flex-col items-center justify-center   bg-[#0E4382] p-4">
+      <div className="flex flex-col items-center justify-center   bg-gray-100 p-4">
         <div className="bg-gray-100 rounded-2xl shadow-2xl p-8 max-w-md w-full">
           {/* Header */}
           <h2 className="text-2xl font-bold text-gray-800 text-center mb-8 tracking-wider">

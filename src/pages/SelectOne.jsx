@@ -24,8 +24,8 @@ const SelectOne = () => {
 
       {/* service section */}
       <div className="text-center mb-8 mt-4">
-        <span className="text-2xl font-bold text-red-700">
-          OUR SERVICES | हाम्रा सेवाहरू
+        <span className="text-2xl font-bold text-[#0E4382]">
+           SELECT ONE |  एक छान्नुहोस्
         </span>
       </div>
 
@@ -51,9 +51,7 @@ const SelectOne = () => {
           <span className="text-lg">DIESEL | डिजेल</span>
         </button>
       </div>
-      <span className="block text-center font-bold text-2xl text-[#0E4382]">
-        SELECT ONE
-      </span>
+    
 
       {/* Back Button */}
       <BackButton />
